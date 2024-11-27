@@ -1,0 +1,199 @@
+html {
+    scroll-behavior: smooth;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: #333;
+}
+
+
+header {
+    background-image: url(../images/bgAbstract.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    /* margin-top: 3em; */
+    padding: 2.6rem 0;
+}
+
+header figure {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+}
+header figure img {
+    width: 100%;
+    border-radius: 2rem;
+}
+header figure  figcaption h1{
+    font-size: 3em;
+}
+header figure  figcaption p{
+    font-size: 1em;
+    max-width: 30rem;
+}
+
+
+nav {
+    background-color: #0a0a0a81;
+    width: 100%;
+    padding: .3rem 3rem;
+    margin: 0 auto;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    list-style: none;
+    gap: 1rem;
+}
+
+nav ul li:hover a,
+nav ul li:hover a.active {
+    border: 1px solid #fff;
+    border-radius: .5rem;
+}
+
+nav ul li a {
+    border: 1px solid #ffffff00;
+    transition: .3s ease all;
+    padding: 1em 1.5em;
+    color: white;
+    display: block;
+    font-weight: 100;
+    text-decoration: none;
+}
+nav ul li a.active {
+    font-weight: bold;
+    border: 1px solid transparent;
+    border-bottom-color: white;
+}
+
+li .link {
+    font-weight: bold;
+    border: 1px solid transparent;
+    border-bottom-color: white;
+}
+li .link{
+    opacity: .3;
+    color: #fff;
+}
+li .link:hover,
+li .link:checked,
+li .link:focus {
+    opacity: 1;
+    font-weight: bold;
+    border: 1px solid #fff;
+}
+
+main {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 1rem 0;
+    flex-grow: 1;
+}
+main h2 {
+    font-size: 2.5em;
+    max-width: 20em;
+    text-align: center;
+    margin: auto;
+    text-transform: capitalize;
+}
+
+.gallery {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+    justify-content: center;
+}
+.gallery-item p{
+margin-top: 1rem;
+text-align: center;
+}
+
+.gallery .gallery-item:nth-child(even) figure{
+    border-color: red;
+}
+
+.gallery figure {
+    text-align: center;
+    border: 1px solid #15151568;
+    padding: 2rem .5rem;
+    border-radius: .5rem;
+}
+.gallery figure figcaption {
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.gallery figure img {
+    width: 100%;
+    max-width: 10rem;
+    margin-bottom: 1rem;
+    transition: .3s ease all;
+}
+.gallery figure:hover img{
+    transform: scale(1.1);
+}
+
+.toggle-content {
+    display: none;
+    padding: 10px;
+}
+
+/* Mostrar el div cuando el checkbox está activado */
+
+input[type="checkbox"]:checked ~ .toggle-content {
+    display: block;
+}
+
+/* Estilo del checkbox */
+label {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border: 2px solid rgba(46, 45, 45, 0.29);
+    padding: .7rem 1.2rem;
+    font-weight: bold;
+    border-radius: .7rem;
+    background: #000;
+    color: white;
+}
+input[type="checkbox"]:checked ~ label {
+    background: #fff;
+    color: #000;
+}
+
+.toggle-content .gallery {
+    margin-top: 0rem;
+}
+
+footer {
+    background: #000;
+    text-align: center;
+    color: #fff;
+    padding: 1.8rem 0;
+    margin-top: 1.5rem;
+}
